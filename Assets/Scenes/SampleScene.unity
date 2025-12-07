@@ -152,14 +152,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc53a049b7f0604694f995a5490fdd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemySpeed: 15
+  _enemySpeed: 12
   _enemyRotationSpeed: 500
   _enemyRotationAroundSpeed: 50
-  _enemyBigPrefab: {fileID: -4813290927096830488, guid: 5ab3c9dc31705e248998dc53049fc5e1,
+  _enemyBigPrefab: {fileID: 4948171687413717124, guid: 5ab3c9dc31705e248998dc53049fc5e1,
     type: 3}
-  _enemyMediumPrefab: {fileID: 2967823998742960178, guid: adecea88202a6fa4cbd923d53224d0ec,
+  _enemyMediumPrefab: {fileID: -2561134522918093757, guid: adecea88202a6fa4cbd923d53224d0ec,
     type: 3}
-  _enemySmallPrefab: {fileID: 3804891646931864763, guid: 763092c0bec276142a1bc77fef5aca3a,
+  _enemySmallPrefab: {fileID: -227785677100112993, guid: 763092c0bec276142a1bc77fef5aca3a,
     type: 3}
   _smallEnemySpawnPoint: {fileID: 2066461128}
   _mediumEnemySpawnPoint: {fileID: 195551635}
@@ -256,8 +256,8 @@ Camera:
   m_GameObject: {fileID: 330585543}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.38042897, g: 0.9716981, b: 0.80477214, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -281,8 +281,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 11
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -307,7 +307,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: 0, y: 18, z: -30}
+  m_LocalPosition: {x: 0, y: 30, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -575,7 +575,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 1, z: 30}
+  m_LocalScale: {x: 50, y: 1, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
