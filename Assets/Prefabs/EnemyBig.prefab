@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 8206840172699606563}
   - component: {fileID: -4451790513872042221}
   - component: {fileID: 8108727990246819355}
-  - component: {fileID: -4813290927096830488}
   - component: {fileID: -2354140502849842668}
+  - component: {fileID: 4948171687413717124}
   m_Layer: 0
   m_Name: EnemyBig
   m_TagString: Untagged
@@ -133,19 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7205a64204820914182ccd28cb255353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-4813290927096830488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6485319903994427577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1612cb3d15d45a043944277b842ca4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _agroDistance: 3
 --- !u!54 &-2354140502849842668
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -173,3 +160,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4948171687413717124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6485319903994427577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b0eb20e0cebf1489e058c880815aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _agroDistance: 7

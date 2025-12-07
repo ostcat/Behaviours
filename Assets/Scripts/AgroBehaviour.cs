@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AgroBehaviour : IReactionBehaviour
@@ -22,14 +20,10 @@ public class AgroBehaviour : IReactionBehaviour
         _speed = speed;
         _rotationSpeed = rotationSpeed;
     }
-    public void Enter()
-    {
-
-    }
 
     public void Process()
     {
-        Vector3 _directionToTarget = GetDirectionToHeroTarget();
+       _directionToTarget = GetDirectionToHeroTarget();
     }
 
     public void FixedProcess()

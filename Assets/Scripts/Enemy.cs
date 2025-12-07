@@ -1,24 +1,22 @@
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     private IReactionBehaviour _reactionBehaviour;
     private IIdleBehaviour _idleBehaviour;
     private IBehaviour _currentBehaviour;
     private DistanceDetector _distanceDetector;
     private Hero _hero;
-    [SerializeField] private float _agroDistance = 3;
+    [SerializeField] private float _agroDistance = 7;
 
-    public void Initialize (IReactionBehaviour reactionBehaviour, IIdleBehaviour idleBehaviour, Hero hero, DistanceDetector distanceDetector)
+    public void Initialize(IReactionBehaviour reactionBehaviour, IIdleBehaviour idleBehaviour, Hero hero, DistanceDetector distanceDetector)
     {
         _reactionBehaviour = reactionBehaviour;
         _idleBehaviour = idleBehaviour;
         _hero = hero;
         _distanceDetector = distanceDetector;
         _currentBehaviour = _idleBehaviour;
-        _currentBehaviour.Enter();
     }
-
 
     private void Update()
     {
@@ -39,11 +37,5 @@ public abstract class Enemy : MonoBehaviour
     {
         if (_currentBehaviour != null)
             _currentBehaviour.FixedProcess();
-    }
-
-    public void SetBehaviour(IBehaviour behaviour)
-    {
-        _currentBehaviour = behaviour;
-        _currentBehaviour.Enter();
     }
 }

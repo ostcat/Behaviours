@@ -8,4 +8,9 @@ public class Rotator : MonoBehaviour
         float step = speed * Time.deltaTime;
         transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, step);
     }
+
+    public void ProcessRotateAroundY(float speed)
+    {
+        transform.Rotate(Vector3.up * speed * Time.deltaTime);
+    }
 }

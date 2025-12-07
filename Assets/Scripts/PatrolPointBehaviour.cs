@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PatrolPointBehaviour : IIdleBehaviour
 {
-    private const float MinDistanceToTarget = 0.1f;
+    private const float MinDistanceToTarget = 0.2f;
     [SerializeField] private List<Transform> _targets;
     private Mover _mover;
     private Rotator _rotator;
@@ -23,10 +23,7 @@ public class PatrolPointBehaviour : IIdleBehaviour
         _rotator = rotator;
         _speed = speed;
         _rotationSpeed = rotationSpeed;
-    }
 
-    public void Enter()
-    {
         _targetsPositions = new Queue<Vector3>();
 
         foreach (Transform target in _targets)
@@ -38,11 +35,9 @@ public class PatrolPointBehaviour : IIdleBehaviour
     public void Process()
     {
         Vector3 direction = GetDirectionToTargetPoint();
-        Debug.Log(direction.magnitude);
 
         if (direction.magnitude < MinDistanceToTarget)
         {
-            Debug.Log("Switch target");
             SwitchTarget();
             return;
         }
@@ -60,7 +55,6 @@ public class PatrolPointBehaviour : IIdleBehaviour
 
     private void SwitchTarget()
     {
-        Debug.Log("Μενÿεμ φελό");
         _currentTarget = _targetsPositions.Dequeue();
         _targetsPositions.Enqueue(_currentTarget);
     }
