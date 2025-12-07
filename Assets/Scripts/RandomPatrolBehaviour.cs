@@ -30,7 +30,6 @@ public class RandomPatrolBehaviour : IIdleBehaviour
     public void Process()
     {
         Vector3 direction = GetDirectionToTargetPoint();
-        Debug.Log(direction.magnitude);
         _time += Time.deltaTime;
 
         if (_time >= _tick)

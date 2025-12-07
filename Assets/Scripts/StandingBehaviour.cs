@@ -5,7 +5,6 @@ using UnityEngine;
 public class StandingBehaviour : IIdleBehaviour
 {
     private Rotator _rotator;
-    private Enemy _enemy;
     private float _rotationSpeed;
 
     public StandingBehaviour(Rotator rotator, float rotationSpeed)
@@ -21,7 +20,9 @@ public class StandingBehaviour : IIdleBehaviour
 
     public void Process()
     {
-        Debug.Log(_rotator != null);
-        _rotator.ProcessRotateAroundY(_rotationSpeed);
+        if (_rotator != null)
+            _rotator.ProcessRotateAroundY(_rotationSpeed);
+        else
+            return;
     }
 }

@@ -29,8 +29,7 @@ public class RunawayBehaviour : IReactionBehaviour
     public void FixedProcess()
     {
         _mover.ProcessMoveTo(_directionToMove.normalized, _speed);
-        _rotator.ProcessRotateTo(_directionToMove.normalized, _rotationSpeed);
-        
+        _rotator.ProcessRotateTo(_directionToMove.normalized, _rotationSpeed);  
     }
 
     private Vector3 GetDirectionFromHeroTarget()
